@@ -4,6 +4,10 @@
 
 This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U).
 
+---
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5b0e42e1-b805-43c8-bc69-a398ae124f91/deploy-status)](https://app.netlify.com/sites/fementor-af-nft-preview-card/deploys)
+
 ![mobile](./completed_screenshots/mobile.PNG) ![mobile_hover](./completed_screenshots/mobile_hover.PNG)
 
 ### Links
@@ -13,14 +17,14 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ## My process
 
-### Built with
+### Built with:
 
 - Semantic HTML5 markup
 - SCSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Media Queries & Keyframes
+- Media Queries
 - Vanilla JavaScript
 
 Netlify used for deployment.
