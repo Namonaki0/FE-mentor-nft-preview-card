@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: hsl(217deg, 54%, 11%);
+  color: white;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  padding: 1.6rem;
+}
+
+main {
+  max-width: 240px;
+  padding: 1rem;
+  background: hsl(215deg, 51%, 18%);
+  border-radius: 12px;
+  box-shadow: 10px 25px 10px 10px rgba(3, 2, 2, 0.199);
+}
+main .image-wrapper {
+  border-radius: 7px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+main .image-wrapper .nft-image {
+  border-radius: 7px;
+  width: 100%;
+  display: block;
+}
+main .image-wrapper .overlay {
+  border-radius: 7px;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  display: grid;
+  place-content: center;
+  inset: 0;
+}
+main .image-wrapper .overlay:hover, main .image-wrapper .overlay:focus {
+  background: rgba(0, 255, 255, 0.534);
+}
+main .image-wrapper .overlay:hover .hover-icon, main .image-wrapper .overlay:focus .hover-icon {
+  display: flex;
+}
+main .image-wrapper .overlay .hover-icon {
+  display: none;
+  width: 30px;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+main .card-info-section h2 {
+  font-size: 16px;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  width: max-content;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+main .card-info-section h2:hover, main .card-info-section h2:focus {
+  color: hsl(178deg, 100%, 50%);
+}
+main .card-info-section p {
+  font-size: 12px;
+  width: 94%;
+  color: hsl(215deg, 51%, 70%);
+  line-height: 19px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+main .card-info-section .card-info-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  font-size: 11px;
+}
+@media (min-width: 1440px) {
+  main .card-info-section .card-info-data {
+    margin-bottom: 0.9rem;
+  }
+}
+main .card-info-section .card-info-data .card-info-price,
+main .card-info-section .card-info-data .card-info-time {
+  display: flex;
+  align-items: center;
+}
+main .card-info-section .card-info-data .card-info-price img {
+  width: 8px;
+  margin-right: 0.3rem;
+}
+main .card-info-section .card-info-data .card-info-price span {
+  color: hsl(178deg, 100%, 50%);
+}
+main .card-info-section .card-info-data .card-info-time img {
+  width: 13px;
+  margin-right: 0.3rem;
+}
+main .card-info-section .card-info-data .card-info-time span {
+  color: hsl(215deg, 51%, 70%);
+}
+main .card-info-section .avatar-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0 0;
+}
+main .card-info-section .avatar-wrapper .avatar-image-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  width: 25px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+}
+main .card-info-section .avatar-wrapper .avatar-image-wrapper img {
+  width: 100%;
+}
+main .card-info-section .avatar-wrapper .card-info-author {
+  font-size: 11px;
+  color: white;
+  margin-bottom: 2px;
+  width: max-content;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+main .card-info-section .avatar-wrapper .card-info-author span {
+  color: hsl(215deg, 51%, 70%);
+}
+main .card-info-section .avatar-wrapper .card-info-author:hover, main .card-info-section .avatar-wrapper .card-info-author:focus {
+  color: hsl(178deg, 100%, 50%);
+}
+main .card-info-section hr {
+  height: 0.5px;
+  background: hsla(215deg, 52%, 70%, 0.301);
+  border: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

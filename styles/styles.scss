@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+// PRIMARY
+$soft-blue: hsl(215, 51%, 70%);
+$hover: hsl(178, 100%, 50%);
+// NEUTRAL
+$main-bg-dark-blue: hsl(217, 54%, 11%);
+$card-bg-dark-blue: hsl(215, 51%, 18%);
+$line-dark-blue: hsl(0, 0%, 100%);
+// TYPOGRAPHY
+$font-size: 18px;
+$font-type: "Outfit", sans-serif;
+
+// MIXINS
+@mixin hover-styling {
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+@mixin image-border-radius {
+  border-radius: 7px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-type;
+  background: $main-bg-dark-blue;
+  color: white;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  padding: 1.6rem;
+}
+
+main {
+  max-width: 240px;
+  padding: 1rem;
+  background: $card-bg-dark-blue;
+  border-radius: 12px;
+  box-shadow: 10px 25px 10px 10px rgba(3, 2, 2, 0.199);
+
+  .image-wrapper {
+    @include image-border-radius;
+    margin-bottom: 1rem;
+    position: relative;
+
+    .nft-image {
+      @include image-border-radius;
+      width: 100%;
+      display: block;
+    }
+
+    .overlay {
+      @include image-border-radius;
+      @include hover-styling;
+      position: absolute;
+      display: grid;
+      place-content: center;
+      inset: 0;
+
+      &:hover,
+      &:focus {
+        background: rgba(0, 255, 255, 0.534);
+
+        .hover-icon {
+          display: flex;
+        }
+      }
+
+      .hover-icon {
+        display: none;
+        width: 30px;
+        @include hover-styling;
+      }
+    }
+  }
+
+  .card-info-section {
+    h2 {
+      font-size: 16px;
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+      width: max-content;
+      @include hover-styling;
+
+      &:hover,
+      &:focus {
+        color: $hover;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      width: 94%;
+      color: $soft-blue;
+      line-height: 19px;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .card-info-data {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.7rem;
+      font-size: 11px;
+
+      @media (min-width: 1440px) {
+        margin-bottom: 0.9rem;
+      }
+
+      .card-info-price,
+      .card-info-time {
+        display: flex;
+        align-items: center;
+      }
+
+      .card-info-price {
+        img {
+          width: 8px;
+          margin-right: 0.3rem;
+        }
+
+        span {
+          color: $hover;
+        }
+      }
+
+      .card-info-time {
+        img {
+          width: 13px;
+          margin-right: 0.3rem;
+        }
+
+        span {
+          color: $soft-blue;
+        }
+      }
+    }
+
+    .avatar-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 0 0;
+
+      .avatar-image-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0.1rem;
+        width: 25px;
+        background: white;
+        border-radius: 50%;
+        margin-right: 0.7rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .card-info-author {
+        font-size: 11px;
+        color: white;
+        margin-bottom: 2px;
+        width: max-content;
+        @include hover-styling;
+
+        span {
+          color: $soft-blue;
+        }
+
+        &:hover,
+        &:focus {
+          color: $hover;
+        }
+      }
+    }
+
+    hr {
+      height: 0.5px;
+      background: hsla(215, 52%, 70%, 0.301);
+      border: none;
+    }
+  }
+}
